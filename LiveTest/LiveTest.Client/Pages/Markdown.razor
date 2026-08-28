@@ -1,0 +1,21 @@
+﻿@page "/Markdown"
+@using LiveTest.Client.Components
+@rendermode InteractiveAuto
+
+<h3>
+    SSR
+</h3>
+<MarkdownComponent />
+
+
+<h3>
+    Server
+</h3>
+<MarkdownComponent @rendermode="InteractiveServer" />
+
+
+
+<h3>
+    WASM
+</h3>
+<MarkdownComponent @rendermode="InteractiveWebAssembly" />

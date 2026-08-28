@@ -1,0 +1,42 @@
+﻿.tnt-components.tnt-nav-link {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-flex;
+
+    &:not(.tnt-underlined) {
+        text-decoration: none;
+    }
+
+    &.tnt-filled, &.tnt-outlined {
+        @extend .tnt-label-large;
+        user-select: none;
+        appearance: none;
+        min-height: 40px;
+        min-width: 40px;
+        padding: 0 16px;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    &.tnt-underlined {
+        text-decoration: underline;
+    }
+
+    &.active {
+        &.active-fg-color {
+            color: var(--active-fg-color);
+        }
+
+        &.active-bg-color {
+            background-color: var(--active-bg-color);
+        }
+    }
+
+    .tnt-icon {
+        vertical-align: middle;
+        text-align: inherit;
+        font-size: 18px;
+        padding: 0 4px;
+        pointer-events: none;
+    }
+}

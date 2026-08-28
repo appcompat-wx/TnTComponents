@@ -1,48 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-	  <TargetFrameworks>net9.0;net10.0;net11.0</TargetFrameworks>
-	  <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net11.0'">
-    <WasmBuildNative>false</WasmBuildNative>
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net11.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="11.0.0-preview.6.26359.118" />
-  </ItemGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
-    <WasmBuildNative>true</WasmBuildNative>
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="AspNetCore.SassCompiler" Version="1.102.0" PrivateAssets="all" />
-    <ProjectReference Include="..\..\NTComponents.Analyzers\NTComponents.Analyzers.csproj"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false" />
-    <ProjectReference Include="..\..\NTComponents.Extensions\NTComponents.Extensions.csproj" />
-    <ProjectReference Include="..\..\NTComponents\NTComponents.csproj" />
-    <ProjectReference Include="..\..\Submodules\NTComponents.Charts\NTComponents.Charts\NTComponents.Charts.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Components\CardTesting.razor" />
-    <Content Remove="Components\DialogComponent.razor" />
-    <Content Remove="Components\FormWasmDemo.razor" />
-    <Content Remove="Components\ImageButtons.razor" />
-    <Content Remove="Components\InputFileServerProgressDemo.razor" />
-    <Content Remove="Components\InputFileSseProgressDemo.razor" />
-    <Content Remove="Components\InputFileTemplateProgressDemo.razor" />
-    <Content Remove="Components\InputFileWizardDemo.razor" />
-    <Content Remove="Components\InputTesting.razor" />
-    <Content Remove="Components\SearchableSelectSsrDemo.razor" />
-    <Content Remove="Components\SnackbarComponent.razor" />
-    <Content Remove="Components\TnTConfirmationButton.razor" />
+    <ProjectReference Include="..\..\TnTComponents\TnTComponents.csproj" />
   </ItemGroup>
 
 </Project>

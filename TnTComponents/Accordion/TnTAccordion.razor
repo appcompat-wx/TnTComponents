@@ -1,0 +1,22 @@
+﻿@using TnTComponents.Core
+@inherits TnTPageScriptComponent<TnTAccordion>
+@namespace TnTComponents
+<CascadingValue IsFixed="true" Value="this">
+    <tnt-accordion @attributes="AdditionalAttributes"
+                   class="@ElementClass"
+                   style="@ElementStyle"
+                   title="@ElementTitle"
+                   id="@ElementId"
+                   lang="@ElementLang"
+                   autofocus="@AutoFocus"
+                   @ref="Element">
+        <DeferRendering>
+            @foreach (var child in _children)
+            {
+                @child.RenderChild()
+            }
+        </DeferRendering>
+        @ChildContent
+    </tnt-accordion>
+</CascadingValue>
+@PageScript

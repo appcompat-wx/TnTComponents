@@ -1,4 +1,4 @@
-@using NTComponents
+﻿@using TnTComponents
 <TnTRow>
     <TnTColumn S="12">
 
@@ -30,11 +30,11 @@
             Elevation 10
         </TnTImageButton>
 
-        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" BorderRadius="new NTComponents.Core.TnTBorderRadius(0)">
+        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" BorderRadius="new TnTComponents.Core.TnTBorderRadius(0)">
             CornerRadius 0
         </TnTImageButton>
 
-        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" BorderRadius="new NTComponents.Core.TnTBorderRadius(10)">
+        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" BorderRadius="new TnTComponents.Core.TnTBorderRadius(10)">
             CornerRadius 10
         </TnTImageButton>
 
@@ -46,17 +46,9 @@
             Colored
         </TnTImageButton>
 
-        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick">
+        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" BorderRadius="@(new TnTComponents.Core.TnTBorderRadius() {StartStart = 5, StartEnd = 2, EndEnd = 9, EndStart=3})">
             Obscure Radius
         </TnTImageButton>
-
-        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" Badge="@TnTBadge.CreateBadge("5")">
-        </TnTImageButton>
-
-        <TnTImageButton Icon="@(new MaterialIcon{ Icon = MaterialIcon.GppGood })" OnClickCallback="@OnClick" Badge="@TnTBadge.CreateBadge("This is a long badge that should be ellipses")">
-        </TnTImageButton>
-
-
     </TnTColumn>
 </TnTRow>
 
